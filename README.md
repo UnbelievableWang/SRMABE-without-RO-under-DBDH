@@ -30,3 +30,23 @@ The current implementation is intended as a **research prototype / debug-oriente
 ├── MinSR.java
 ├── SRMABE.java
 └── SRMABEDemo.java
+## Dependency
+
+This project depends on **JPBC 2.0.0** for bilinear pairing operations.
+
+Please make sure the JPBC library is included in your Java project before compiling and running the code.  
+In particular, the implementation relies on the pairing-related classes provided by JPBC for group element generation, exponentiation, and bilinear map evaluation.
+
+The required dependency version is:
+
+- **JPBC 2.0.0**
+
+If you are using this project in an IDE such as IntelliJ IDEA or Eclipse, add the JPBC 2.0.0 JAR files to the project build path manually.
+
+If you are managing dependencies with Maven, you may need to install the JPBC 2.0.0 JARs locally first, since JPBC is not always available in standard remote repositories.
+
+Before running the demo, ensure that:
+
+- the JPBC 2.0.0 library has been added correctly
+- the pairing parameter files required by your `PP.java` implementation are available
+- the project can successfully resolve JPBC classes such as pairing, field, and element types
